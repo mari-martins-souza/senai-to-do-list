@@ -27,3 +27,15 @@ document.getElementById("botao-nova-tarefa").addEventListener("click", function(
     }
 });
 
+let checkboxFixo = document.getElementsByClassName("checkbox-fixo");
+let botaoRemoverFixo = document.getElementsByClassName("botao-remover-fixo");
+
+for (let i = 0; i < botaoRemoverFixo.length; i++) {
+    botaoRemoverFixo[i].addEventListener("click", function () {
+        this.parentElement.remove();
+    });
+
+}
+
+
+
