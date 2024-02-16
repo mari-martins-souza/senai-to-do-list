@@ -1,72 +1,86 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-  } 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+} 
 
-  html {
-    font-size: 16px;
-  }
+html {
+  font-size: 16px;
+}
 
-  body {
-    background-color:#96b5a6;
-  }
+body {
+  background-color:#96b5a6;
+}
 
-  header {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
- 
-  }
+header {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+} 
 
-  h1 {
-    color: #4e383d;
-    font-family: 'Protest Strike', sans-serif;
-    font-weight: 200;
-    font-size: 3rem;
-  }
+h1 {
+  color: #4e383d;
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 200;
+  font-size: 3rem;
+}
 
 #adicionar-tarefa {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  height: 50px;
 }
 
 #botao-nova-tarefa {
-   width: 100px;
-   font-family: 'Quicksand', sans-serif;
-   font-size: 18px;
-   color: white;
-   background-color: #d9434f;
+ width: 100px;
+ font-family: 'Quicksand', sans-serif;
+ font-size: 18px;
+ color: black;
+ background-color: #d9434f;
+ border-radius: 10px;
+ margin-left: 10px;
 }
-
-#lista-tarefas {
-    display: block;
-    width: 25%;
-    margin: 0 auto;
-    padding-top: 2%;
-}
-
-
-li {
-    display: flex;
-    align-items: center;
-    font-family: 'Zilla Slab', serif;
-    color:#fce1cb;
-    font-size: 2rem;
-    list-style: none;
-    width: 100%;
-    text-align: left;
-} 
 
 .checkbox {
-    margin-right: 20px;
-    transform: scale(2);
+  margin-right: 20px;
+  transform: scale(2);
 }
 
 .botao-remover {
-    font-size: 20px;
-    margin-left: 20px;
+  font-size: 20px;
+  margin-left: 20px;
 }
+
+#nova-atividade {
+border-radius: 10px;
+border-style: none;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#container-tarefas {
+  display: flex;
+  justify-content: center;
+}
+
+#lista-tarefas {
+  display: inline-block;
+  
+  overflow-wrap: break-word;
+  width: 600px;
+  padding-top: 2%;
+  margin-bottom: 30px;
+}
+
+li {
+
+  font-family: 'Zilla Slab', serif;
+  color:#fce1cb;
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 3%;
+} 
+
+
