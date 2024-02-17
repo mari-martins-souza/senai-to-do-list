@@ -4,17 +4,21 @@ document.getElementById("botao-nova-tarefa").addEventListener("click", function(
         let checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         let li = document.createElement("li");
-        let botaoRemover = document.createElement("button");
-        botaoRemover.textContent = "X";
-        botaoRemover.style.float = "right";
+        // let botaoRemover = document.createElement("button");
+        let iconeLixeira = document.createElement("img");
+        iconeLixeira.src = "../img/lixeira.png"
+        // botaoRemover.appendChild(iconeLixeira);
+        // botaoRemover.style.float = "right";
+        iconeLixeira.style.float = "right";
+       
 
-        botaoRemover.addEventListener("click", function() {
+        iconeLixeira.addEventListener("click", function() {
             this.parentElement.remove()
         });
 
         li.appendChild(checkbox);
         li.appendChild(document.createTextNode(novaAtividade.value));
-        li.appendChild(botaoRemover);
+        li.appendChild(iconeLixeira);
             
         
         let addNovaTarefa = document.getElementById("lista-tarefas");
