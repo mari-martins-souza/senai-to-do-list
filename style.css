@@ -10,8 +10,11 @@ html {
 }
 
 body {
-  background-color:#96b5a6;
+  background-image: url('/img/post-it.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
+
 
 header {
   display: flex;
@@ -20,10 +23,10 @@ header {
 } 
 
 h1 {
-  color: #4e383d;
+  color: #152b3c;
   font-family: 'Protest Strike', sans-serif;
   font-weight: 200;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 #adicionar-tarefa {
@@ -37,10 +40,13 @@ h1 {
  width: 100px;
  font-family: 'Quicksand', sans-serif;
  font-size: 18px;
- color: black;
- background-color: #d9434f;
+ color: #152b3c;
+ background-color: #e07767;
  border-radius: 10px;
  margin-left: 10px;
+ border-style: none;
+ box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+
 }
 
 .checkbox {
@@ -68,6 +74,7 @@ border-radius: 10px;
 border-style: none;
 padding-left: 10px;
 padding-right: 10px;
+box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
 }
 
 #container-tarefas {
@@ -85,10 +92,14 @@ padding-right: 10px;
 
 li {
   font-family: 'Zilla Slab', serif;
-  color:#fce1cb;
+  color:#152b3c;
   font-size: 1.5rem;
   list-style: none;
   padding: 3%;
+  background: #d4e067;
+  margin-top: 2%;
+  border-radius: 10px;
+   
 } 
 
 .icone-lixeira {

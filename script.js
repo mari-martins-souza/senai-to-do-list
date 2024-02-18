@@ -5,12 +5,8 @@ document.getElementById("botao-nova-tarefa").addEventListener("click", function(
         checkbox.type = "checkbox";
         let li = document.createElement("li");
         let iconeLixeira = document.createElement("img");
-        iconeLixeira.src = "../img/lixeira-x.png"
+        iconeLixeira.src = "/img/lixeira-x.png"
         iconeLixeira.style.float = "right";
-        
-        // let botaoRemover = document.createElement("button");
-        // botaoRemover.appendChild(iconeLixeira);
-        // botaoRemover.style.float = "right";
 
         // o span foi necessário somente por causa da função de riscar
         // o texto dentro do <li> quando a checkbox estiver marcada
