@@ -16,7 +16,8 @@ document.getElementById("botao-nova-tarefa").addEventListener("click",  function
     iconeLixeira.addEventListener("click", function() {
         let confirmacao = confirm("A exclusão não pode ser revertida, tem certeza?");
             if (confirmacao) {
-                this.parentElement.remove()        
+                this.parentElement.remove()   
+                atualizarContador();     
     }
 });
 
@@ -37,6 +38,7 @@ document.getElementById("botao-nova-tarefa").addEventListener("click",  function
         
     let addNovaTarefa = document.getElementById("lista-tarefas");
     addNovaTarefa.appendChild(li);
+    atualizarContador();
     novaAtividade.value = "";
 
     checkbox.className = "checkbox";
@@ -51,6 +53,7 @@ for (let i = 0; i < botaoRemoverFixo.length; i++) {
         let confirmacao = confirm("A exclusão não pode ser revertida, tem certeza?");
             if (confirmacao) {
         this.parentElement.remove();
+        atualizarContador(); 
     }
 })
 };
@@ -66,3 +69,10 @@ for (let i = 0; i < checkboxFixas.length; i++) {
             }
     })
 };
+
+function atualizarContador() {
+    let contador = document.getElementById("contador-texto");
+    let listaTarefas = document.getElementById("lista-tarefas");
+    contador.innerText = "Tarefas em aberto: " + listaTarefas.children.length;
+}
+
