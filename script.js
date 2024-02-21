@@ -1,4 +1,4 @@
-document.getElementById("botao-nova-tarefa").addEventListener("click", function() {
+document.getElementById("botao-nova-tarefa").addEventListener("click",  function() {
     let novaAtividade = document.getElementById("nova-atividade");
     if (novaAtividade.value !== "") {
         let checkbox = document.createElement("input");
@@ -14,8 +14,11 @@ document.getElementById("botao-nova-tarefa").addEventListener("click", function(
         span.appendChild(document.createTextNode(novaAtividade.value));
         
     iconeLixeira.addEventListener("click", function() {
-        this.parentElement.remove()
-    });
+        let confirmacao = confirm("A exclusão não pode ser revertida, tem certeza?");
+            if (confirmacao) {
+                this.parentElement.remove()        
+    }
+});
 
         checkbox.addEventListener("change", function() {
             if(this.checked) {
@@ -45,10 +48,12 @@ let botaoRemoverFixo = document.getElementsByClassName("icone-lixeira-fixa");
 
 for (let i = 0; i < botaoRemoverFixo.length; i++) {
     botaoRemoverFixo[i].addEventListener("click", function () {
+        let confirmacao = confirm("A exclusão não pode ser revertida, tem certeza?");
+            if (confirmacao) {
         this.parentElement.remove();
-        
-    });
-}
+    }
+})
+};
 
 let checkboxFixas = document.getElementsByClassName("checkbox-fixo")
 
@@ -59,9 +64,5 @@ for (let i = 0; i < checkboxFixas.length; i++) {
             } else {
                 this.nextSibling.style.textDecoration = "none";
             }
-        
-    });
-}
-
-
-
+    })
+};
